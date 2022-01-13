@@ -1,0 +1,7 @@
+.parent{
+    color: blue;
+    text-decoration: underline;
+}
+.parent:hover{
+    cursor: pointer;
+}
