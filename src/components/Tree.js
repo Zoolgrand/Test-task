@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './Tree.css';
 
 function Tree({ obj, isExpand, setIsExpand }) {
@@ -22,10 +22,6 @@ function Tree({ obj, isExpand, setIsExpand }) {
     console.log(isExpand)
   }
 
-  function colapseHandler() {
-    setIsExpand(true);
-  }
-
   return (
     <ul>
       {ArrForRender.map((item) =>
@@ -34,7 +30,7 @@ function Tree({ obj, isExpand, setIsExpand }) {
             {item.propName} : {item.value}
           </li>
         ) : (
-          <li onClick={colapseHandler}>
+          <li >
             <li className="parent" onClick={showChildHandler}>
               {item.propName}
             </li>
