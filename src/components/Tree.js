@@ -15,11 +15,11 @@ function Tree({ obj, isExpand, setIsExpand }) {
     ArrForRender.push(treeObj);
   }
 
-  function showChildHandler(e) {
-    e.stopPropagation();
+  function showChildHandler() {
     setIsExpand(true)
+    //В цьому моменті при першому рендері неправильно змінюється стейт, isVisible стає false ы при першому кліку не рендериться правильно
     setIsVisible(!isVisible);
-    console.log(isExpand)
+    console.log(isVisible)
   }
 
   return (

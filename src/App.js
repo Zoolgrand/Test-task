@@ -6,7 +6,7 @@ function App() {
   
   const [isExpand, setIsExpand] = useState(true);
 
-  function clickHandler() {
+  const clickHandler=()=> {
     setIsExpand(!isExpand);
   }
 
