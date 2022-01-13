@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Tree.css';
 
-function Tree({ obj, isExpand, setisExpand }) {
+function Tree({ obj, isExpand, setIsExpand }) {
+
   const [isVisible, setIsVisible] = useState(true);
-
   const ArrForRender = [];
-
+  
   for (let key in obj) {
     const treeObj = {
       propName: key,
@@ -17,12 +17,13 @@ function Tree({ obj, isExpand, setisExpand }) {
 
   function showChildHandler(e) {
     e.stopPropagation();
-    // setisExpand(true)
+    setIsExpand(true)
     setIsVisible(!isVisible);
+    console.log(isExpand)
   }
 
   function colapseHandler() {
-    setisExpand(true);
+    setIsExpand(true);
   }
 
   return (
@@ -38,7 +39,7 @@ function Tree({ obj, isExpand, setisExpand }) {
               {item.propName}
             </li>
             {isExpand && isVisible && (
-              <Tree obj={item.value} isExpand={isExpand} />
+              <Tree obj={item.value} setIsExpand={setIsExpand} isExpand={isExpand} />
             )}
           </li>
         )

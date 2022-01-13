@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
+  
   const [isExpand, setIsExpand] = useState(true);
 
   function clickHandler() {
@@ -35,7 +36,7 @@ function App() {
     },
   };
 
-  //If we use real JSON example we should transform it into object first
+  //If we use real JSON example we should transform it into object first and then use it instead of dummy object
   // const jsonObj = JSON.parse(jsonExample);
 
   return (
