@@ -35,7 +35,7 @@ function App() {
     },
   };
 
-  //If we use real JSON exanple we should transform it into object first
+  //If we use real JSON example we should transform it into object first
   // const jsonObj = JSON.parse(jsonExample);
 
   return (
